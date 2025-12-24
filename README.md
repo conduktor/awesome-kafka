@@ -2,8 +2,6 @@
 
 A curated list of awesome Apache Kafka resources, tools, libraries, and applications.
 
-Inspired by [awesome-data-engineering](https://github.com/igorbarinov/awesome-data-engineering) and [awesome-bigdata](https://github.com/oxnr/awesome-bigdata).
-
 - [Awesome Kafka](#awesome-kafka)
   - [Kafka](#kafka)
   - [Clients](#clients)
@@ -14,9 +12,22 @@ Inspired by [awesome-data-engineering](https://github.com/igorbarinov/awesome-da
   - [CLI Tools](#cli-tools)
   - [Security](#security)
   - [Testing & Development](#testing--development)
+  - [Observability & Tracing](#observability--tracing)
+  - [Kafka on Kubernetes](#kafka-on-kubernetes)
+  - [Use Cases & Case Studies](#use-cases--case-studies)
+  - [Best Practices & Patterns](#best-practices--patterns)
+  - [Troubleshooting & Performance](#troubleshooting--performance)
+  - [Internals & Architecture](#internals--architecture)
+  - [Disaster Recovery](#disaster-recovery)
+  - [Migration Guides](#migration-guides)
+  - [AI/ML Integration](#aiml-integration)
+  - [Data Lakehouse Integration](#data-lakehouse-integration)
+  - [Notable KIPs](#notable-kips)
   - [Kafka-Compatible Alternatives](#kafka-compatible-alternatives)
   - [Managed Services](#managed-services)
   - [Learning Resources](#learning-resources)
+  - [Conferences & Events](#conferences--events)
+  - [Newsletters & Community](#newsletters--community)
   - [Books](#books)
 
 ## Kafka
@@ -73,6 +84,7 @@ Inspired by [awesome-data-engineering](https://github.com/igorbarinov/awesome-da
 ### Scala
 - [Alpakka Kafka](https://github.com/akka/alpakka-kafka) - Reactive Streams connector for Akka Streams.
 - [ZIO Kafka](https://github.com/zio/zio-kafka) - ZIO-based Kafka client for functional Scala.
+- [Greyhound](https://github.com/wix/greyhound) - Wix's high-level Kafka SDK with ZIO, used in 1,500+ microservices.
 
 ### Kotlin
 - [kotlin-kafka](https://github.com/nomisRev/kotlin-kafka) - Kotlin Coroutines and Arrow integration for Kafka.
@@ -101,6 +113,8 @@ Inspired by [awesome-data-engineering](https://github.com/igorbarinov/awesome-da
 ### Kafka-Native
 - [Kafka Streams](https://kafka.apache.org/documentation/streams/) - Client library for building stream processing applications.
 - [ksqlDB](https://ksqldb.io/) - Event streaming database with SQL interface built on Kafka Streams.
+- [Interactive Queries](https://docs.confluent.io/platform/current/streams/developer-guide/interactive-queries.html) - Query state stores in Kafka Streams applications.
+- [StreamT](https://github.com/conduktor/streamt) - Conduktor's dbt for streaming, transforming data in Kafka with SQL.
 
 ### Frameworks
 - [Apache Flink](https://flink.apache.org/) - Distributed stream processing framework with exactly-once semantics.
@@ -217,6 +231,7 @@ Inspired by [awesome-data-engineering](https://github.com/igorbarinov/awesome-da
 - [Cruise Control UI](https://github.com/linkedin/cruise-control-ui) - Web interface for Cruise Control operations.
 - [MirrorMaker 2](https://kafka.apache.org/documentation/#georeplication) - Built-in cross-cluster replication using Kafka Connect.
 - [Jikkou](https://github.com/streamthoughts/jikkou) - GitOps tool for managing Kafka resources as code.
+- [Kafka-Kit](https://github.com/DataDog/kafka-kit) - Datadog's tools for partition mapping, rebalancing, and auto-throttling.
 
 ### Interactive Tools
 - [Kafka Options Explorer](https://kafka-options-explorer.conduktor.io/) - Browse and compare Kafka configuration options across versions.
@@ -244,7 +259,6 @@ Inspired by [awesome-data-engineering](https://github.com/igorbarinov/awesome-da
 ### Encryption
 - [kafka-end-2-end-encryption](https://github.com/salyh/kafka-end-2-end-encryption) - Transparent AES encryption for Kafka messages.
 - [kafkacrypto](https://github.com/tmcqueen-materials/kafkacrypto) - End-to-end encryption library for Python and Java.
-- [Kryptonite](https://github.com/mercari/Kryptonite) - Field-level encryption SMT for Kafka Connect.
 
 ### Governance
 - [Apache Atlas](https://atlas.apache.org/) - Metadata management and data lineage for Kafka.
@@ -292,6 +306,208 @@ Inspired by [awesome-data-engineering](https://github.com/igorbarinov/awesome-da
 - [Confluent for VS Code](https://marketplace.visualstudio.com/items?itemName=confluentinc.vscode-confluent) - Official Confluent extension for VS Code.
 - [Tools for Apache Kafka](https://marketplace.visualstudio.com/items?itemName=jeppeandersen.vscode-kafka) - VS Code extension for Kafka development.
 
+## Observability & Tracing
+
+### OpenTelemetry
+- [Instrumenting Kafka Clients with OpenTelemetry](https://opentelemetry.io/blog/2022/instrument-kafka-clients/) - Official OpenTelemetry guide for Kafka instrumentation.
+- [Kafka with OpenTelemetry Guide](https://last9.io/blog/kafka-with-opentelemetry/) - Comprehensive distributed tracing setup guide.
+- [Tracing Kafka with OpenTelemetry](https://www.instaclustr.com/blog/tracing-apache-kafka-with-opentelemetry/) - Practical instrumentation tutorial.
+- [Distributed Tracing for Kafka](https://newrelic.com/blog/how-to-relic/distributed-tracing-with-kafka) - New Relic's OpenTelemetry integration guide.
+- [Strimzi OpenTelemetry Support](https://strimzi.io/blog/2023/03/01/opentelemetry/) - From OpenTracing to OpenTelemetry in Strimzi.
+
+### Tracing Backends
+- [Jaeger](https://www.jaegertracing.io/) - Open-source distributed tracing platform.
+- [Zipkin](https://zipkin.io/) - Distributed tracing system for gathering timing data.
+- [Grafana Tempo](https://grafana.com/oss/tempo/) - High-scale distributed tracing backend.
+
+## Kafka on Kubernetes
+
+### Operators
+- [Strimzi](https://strimzi.io/) - CNCF Incubating Kubernetes operator for Apache Kafka.
+- [Confluent for Kubernetes](https://docs.confluent.io/operator/current/overview.html) - Official Confluent operator for deploying Confluent Platform.
+- [Koperator](https://github.com/banzaicloud/koperator) - Banzai Cloud's Kubernetes operator for Kafka (formerly Kafka Operator).
+
+### Helm Charts
+- [Confluent Platform Helm Charts](https://github.com/confluentinc/cp-helm-charts) - Helm charts for Confluent Platform components.
+- [Bitnami Kafka Chart](https://github.com/bitnami/charts/tree/main/bitnami/kafka) - Production-ready Kafka Helm chart.
+- [Strimzi Helm Charts](https://strimzi.io/docs/operators/latest/deploying.html#deploying-cluster-operator-helm-chart-str) - Helm-based Strimzi installation.
+
+### Resources
+- [Running Kafka on Kubernetes at Shopify](https://shopify.engineering/running-apache-kafka-on-kubernetes-at-shopify) - Shopify's Kubernetes migration journey.
+- [Kafka on Kubernetes Best Practices](https://www.confluent.io/blog/apache-kafka-kubernetes-best-practices/) - Confluent's production recommendations.
+
+## Use Cases & Case Studies
+
+### Enterprise Scale
+- [PayPal: Scaling Kafka to 1.3 Trillion Messages/Day](https://medium.com/paypal-tech/scaling-kafka-to-support-paypals-data-growth-a0b4da420fab) - How PayPal runs 85+ clusters with 1,500 brokers processing trillions of messages.
+- [LinkedIn: 7 Trillion Messages Per Day](https://engineering.linkedin.com/blog/2019/apache-kafka-trillion-messages) - LinkedIn's Kafka customizations with 100+ clusters and 4,000+ brokers.
+- [Cloudflare: 1 Trillion Inter-Service Messages](https://blog.cloudflare.com/using-apache-kafka-to-process-1-trillion-messages/) - How Cloudflare uses Kafka for analytics, DDoS mitigation, and logging.
+- [Netflix: Keystone Pipeline](https://www.confluent.io/blog/how-kafka-is-used-by-netflix/) - Netflix's real-time personalization processing 2 trillion messages/day.
+- [Uber: Trillion Events Per Day](https://www.slideshare.net/Hadoop_Summit/how-uber-scaled-its-real-time-infrastructure-to-trillion-events-per-day) - Uber's real-time infrastructure for driver-rider matching and fraud detection.
+- [Pinterest: 1.2 Petabytes Per Day](https://medium.com/pinterest-engineering/how-pinterest-runs-kafka-at-scale-ff9c6f735be) - Running 2,000+ brokers for real-time streaming applications.
+- [Airbnb: Riverbed Framework](https://www.infoq.com/news/2023/10/airbnb-riverbed-introduction/) - Processing 2.4 billion events daily with Kafka and Spark.
+- [Twitter: Kafka Adoption Story](https://blog.x.com/engineering/en_us/topics/insights/2018/twitters-kafka-adoption-story) - Twitter's migration from EventBus to Kafka with 68-75% resource savings.
+- [Stripe: 6 Nines Availability](https://www.confluent.io/events/kafka-summit-london-2022/6-nines-how-stripe-keeps-kafka-highly-available-across-the-globe/) - How Stripe achieves 99.9999% uptime with 700TB daily throughput.
+- [Slack: Self-Driving Kafka Clusters](https://slack.engineering/building-self-driving-kafka-clusters-using-open-source-components/) - Slack's Kafka powering job queues, logging, and analytics at 6.5Gbps.
+- [Shopify: Billions of Events](https://shopify.engineering/capturing-every-change-shopify-sharded-monolith) - CDC with Debezium handling 66M messages/second at peak.
+- [DoorDash: 100 Billion Events](https://www.infoq.com/presentations/doordash-event-system/) - Iguazu pipeline processing billions of events with Kafka and Flink.
+- [Datadog: Trillions of Datapoints](https://www.datadoghq.com/blog/kafka-at-datadog/) - Running 40+ clusters with petabytes of NVMe storage.
+- [Instacart: COVID-19 Scale](https://www.confluent.io/customers/instacart/) - 10 years of growth in 6 weeks during pandemic surge.
+- [Lyft: Real-Time Pricing](https://www.confluent.io/resources/kafka-summit-2020/can-kafka-handle-a-lyft-ride/) - Kafka for map-matching, ETA, and dynamic pricing.
+
+### Architecture Patterns
+- [Wix: 6 Event-Driven Architecture Patterns (Part 1)](https://medium.com/wix-engineering/6-event-driven-architecture-patterns-part-1-93758b253f47) - Patterns from running 1,500 microservices on Kafka.
+- [Wix: 6 Event-Driven Architecture Patterns (Part 2)](https://medium.com/wix-engineering/6-event-driven-architecture-patterns-part-2-455cc73b22e1) - Advanced patterns including retry strategies and dead-letter queues.
+- [Kai Waehner: Use Cases Across Industries](https://www.kai-waehner.de/blog/2020/10/20/apache-kafka-event-streaming-use-cases-architectures-examples-real-world-across-industries/) - Comprehensive overview of Kafka use cases by industry.
+- [Kafka in Production](https://github.com/dttung2905/kafka-in-production) - Curated collection of tech blogs and talks from companies running Kafka.
+
+## Best Practices & Patterns
+
+### Event Sourcing & CQRS
+- [Event Sourcing, CQRS, and Kafka](https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/) - How Kafka enables event sourcing and CQRS patterns.
+- [CQRS in Event Sourcing Patterns](https://developer.confluent.io/courses/event-sourcing/cqrs/) - Confluent Developer course on implementing CQRS with Kafka.
+- [Microservices: Event Sourcing & CQRS](https://microservices.io/patterns/data/event-sourcing.html) - Pattern catalog entry for event sourcing.
+
+### Exactly-Once Semantics
+- [Exactly-Once Semantics in Kafka](https://www.confluent.io/blog/exactly-once-semantics-are-possible-heres-how-apache-kafka-does-it/) - Deep dive into how Kafka achieves exactly-once.
+- [Exactly-Once Processing with Kafka](https://www.baeldung.com/kafka-exactly-once) - Baeldung guide with Java code examples.
+- [Idempotent Consumer Pattern](https://medium.com/@zdb.dashti/exactly-once-semantics-using-the-idempotent-consumer-pattern-927b2595f231) - Implementing idempotency for exactly-once semantics.
+- [What Exactly-Once Really Means](https://softwaremill.com/what-kafka-exactly-once-really-means/) - Clarifying the semantics and limitations.
+
+### Partitioning Strategies
+- [Kafka Topic Partitioning Strategies](https://newrelic.com/blog/best-practices/effective-strategies-kafka-topic-partitioning) - Best practices from New Relic.
+- [Partition Strategy Guide](https://www.confluent.io/learn/kafka-partition-strategy/) - Confluent's comprehensive partitioning guide.
+- [Ultimate Comparison of Partition Strategies](https://risingwave.com/blog/the-ultimate-comparison-of-kafka-partition-strategies-everything-you-need-to-know/) - Detailed comparison of all partitioning approaches.
+
+### Transactional Outbox Pattern
+- [Reliable Microservices Data Exchange with the Outbox Pattern](https://debezium.io/blog/2019/02/19/reliable-microservices-data-exchange-with-the-outbox-pattern/) - Debezium's foundational outbox pattern guide.
+- [Debezium Outbox Event Router](https://debezium.io/documentation/reference/stable/transformations/outbox-event-router.html) - Official Debezium outbox SMT documentation.
+- [Implementing Outbox Pattern with CDC](https://thorben-janssen.com/outbox-pattern-with-cdc-and-debezium/) - Practical implementation guide.
+- [Transactional Outbox at SeatGeek](https://chairnerd.seatgeek.com/transactional-outbox-pattern/) - Real-world production implementation.
+- [Outbox with Debezium: Hidden Challenges](https://medium.com/yotpoengineering/outbox-with-debezium-and-kafka-the-hidden-challenges-998c00487ae4) - Lessons learned at Yotpo.
+
+### Schema Evolution
+- [Schema Evolution and Compatibility](https://docs.confluent.io/platform/current/schema-registry/fundamentals/schema-evolution.html) - Official Confluent schema evolution guide.
+- [Schema Registry Best Practices](https://www.confluent.io/blog/best-practices-for-confluent-schema-registry/) - Confluent's recommendations for schema management.
+- [Schema Evolution in Kafka](https://www.everythingdevops.dev/blog/schema-evolution-in-kafka) - Comprehensive guide to backward and forward compatibility.
+- [Schema Compatibility Testing](https://developer.confluent.io/courses/schema-registry/schema-compatibility/) - Confluent course on testing schema compatibility.
+- [Handling Schema Evolution in Kafka Connect](https://medium.com/cloudnativepub/handling-schema-evolution-in-kafka-connect-patterns-pitfalls-and-practices-391795d7d8b0) - Patterns and pitfalls guide.
+
+## Troubleshooting & Performance
+
+### Consumer Lag
+- [Kafka Consumer Lag Explained](https://dattell.com/data-architecture-blog/kafka-consumer-lag-explained/) - Understanding and monitoring consumer lag.
+- [Fixing Consumer Lag Guide](https://last9.io/blog/fixing-kafka-consumer-lag/) - Practical guide to diagnosing and fixing lag.
+- [Kafka Lag Causes and Solutions](https://www.redpanda.com/guides/kafka-performance-kafka-lag) - Comprehensive lag troubleshooting.
+- [Consumer Lag Monitoring](https://sematext.com/blog/kafka-consumer-lag-offsets-monitoring/) - Setting up lag monitoring with offsets.
+
+### Performance Tuning
+- [7 Critical Kafka Performance Best Practices](https://www.instaclustr.com/education/apache-kafka/kafka-performance-7-critical-best-practices/) - Essential tuning recommendations.
+- [Top 10 Tips for Tuning Performance](https://www.meshiq.com/top-10-tips-for-tuning-kafka-performance/) - meshIQ's performance optimization guide.
+- [Kafka Performance Tuning](https://www.redpanda.com/guides/kafka-performance-kafka-performance-tuning) - Redpanda's tuning strategies.
+- [Kafka Optimization Theorem](https://developers.redhat.com/articles/2022/05/03/fine-tune-kafka-performance-kafka-optimization-theorem) - Red Hat's mathematical approach to tuning.
+- [Producer and Consumer Tuning](https://www.meshiq.com/blog/tuning-kafka-producers-and-consumers-for-maximum-efficiency/) - Fine-tuning client configurations.
+
+### Debugging & Troubleshooting
+- [Troubleshooting and Debugging in Kafka](https://www.danielsobrado.com/blog/troubleshooting-and-debugging-in-kafka/) - Comprehensive debugging guide.
+- [Common Kafka Performance Issues](https://www.meshiq.com/blog/common-kafka-performance-issues-and-how-to-fix-them/) - Diagnosing and fixing common issues.
+
+## Internals & Architecture
+
+### KRaft (ZooKeeper Replacement)
+- [Deep Dive into KRaft Protocol](https://developers.redhat.com/articles/2025/09/17/deep-dive-apache-kafkas-kraft-protocol) - Red Hat's technical deep dive based on Kafka 4.1.0.
+- [KRaft Overview](https://developer.confluent.io/learn/kraft/) - Confluent's guide to Kafka Raft mode.
+- [Evolution from ZooKeeper to KRaft](https://romanglushach.medium.com/the-evolution-of-kafka-architecture-from-zookeeper-to-kraft-f42d511ba242) - Architectural evolution explained.
+
+### Replication & Consistency
+- [Kafka Replication Deep Dive](https://faderskd.github.io/2024-05-15-kafka-replication.html) - Technical deep dive into replication internals.
+- [ISR, High Watermark & Leader Epoch](https://shayne007.github.io/2025/06/09/Kafka-ISR-High-Watermark-Leader-Epoch-Deep-Dive-Guide/) - Understanding ISR and consistency guarantees.
+- [Replication Documentation](https://docs.confluent.io/kafka/design/replication.html) - Official Confluent replication docs.
+
+### Log Compaction
+- [Log Compaction Design](https://docs.confluent.io/kafka/design/log_compaction.html) - Official log compaction documentation.
+- [Introduction to Log Compaction](https://medium.com/swlh/introduction-to-topic-log-compaction-in-apache-kafka-3e4d4afd2262) - Beginner-friendly explanation.
+- [Log Compaction Troubleshooting](https://www.redpanda.com/guides/kafka-performance-kafka-log-compaction) - Configuration and troubleshooting guide.
+- [Compaction in Kafka Topics](https://www.baeldung.com/ops/kafka-topics-compaction) - Baeldung's practical guide.
+
+### How Kafka Works
+- [How Kafka Works](https://newsletter.systemdesign.one/p/how-kafka-works) - System design newsletter deep dive.
+- [Kafka Architecture Deep Dive](https://developer.confluent.io/courses/architecture/get-started/) - Confluent's architecture course.
+
+## Disaster Recovery
+
+### Multi-Datacenter Patterns
+- [Disaster Recovery for Multi-Datacenter Deployments](https://www.confluent.io/blog/disaster-recovery-multi-datacenter-apache-kafka-deployments/) - Confluent's comprehensive DR guide.
+- [Active-Passive vs Active-Active Topologies](https://www.automq.com/blog/kafka-replication-topologies-active-passive-vs-active-active) - Comparison of replication patterns.
+- [Cross-Data-Center Replication Playbook](https://www.confluent.io/blog/kafka-cross-data-center-replication-decision-playbook/) - Decision framework for geo-replication.
+- [Multi-Region Kafka with RPO=0](https://www.kai-waehner.de/blog/2025/08/04/multi-region-kafka-using-synchronous-replication-for-disaster-recovery-with-zero-data-loss-rpo0/) - Achieving zero data loss with synchronous replication.
+- [Hitchhiker's Guide to DR and Multi-Region Kafka](https://www.warpstream.com/blog/the-hitchhikers-guide-to-disaster-recovery-and-multi-region-kafka) - WarpStream's comprehensive guide.
+- [Building Bulletproof DR for Kafka](https://oso.sh/blog/building-bulletproof-disaster-recovery-for-apache-kafka-a-field-tested-architecture/) - Field-tested architecture patterns.
+
+### Replication Tools
+- [MirrorMaker 2](https://kafka.apache.org/documentation/#georeplication) - Built-in cross-cluster replication.
+- [Confluent Replicator](https://docs.confluent.io/platform/current/multi-dc-deployments/replicator/index.html) - Enterprise replication with conflict detection.
+- [Cluster Linking](https://docs.confluent.io/cloud/current/multi-cloud/cluster-linking/index.html) - Byte-for-byte topic mirroring in Confluent Cloud.
+
+## Migration Guides
+
+### ZooKeeper to KRaft
+- [KIP-866: ZooKeeper to KRaft Migration](https://cwiki.apache.org/confluence/display/KAFKA/KIP-866+ZooKeeper+to+KRaft+Migration) - Official migration KIP.
+- [Strimzi KRaft Migration](https://strimzi.io/blog/2024/03/21/kraft-migration/) - How the migration works technically.
+- [Confluent ZK to KRaft Migration](https://docs.confluent.io/platform/current/installation/migrate-zk-kraft.html) - Confluent Platform migration guide.
+- [OSO ZooKeeper to KRaft Guide](https://oso.sh/blog/guide-to-zookeeper-to-kraft-migration/) - Step-by-step migration guide.
+- [Strimzi Cluster Migration](https://strimzi.io/blog/2024/03/22/strimzi-kraft-migration/) - Kubernetes-specific migration with Strimzi.
+
+### Cross-Cluster Replication
+- [MirrorMaker 2 Guide](https://www.confluent.io/learn/kafka-mirrormaker/) - How to replicate data across clusters.
+- [MirrorMaker 2 Best Practices](https://www.automq.com/blog/kafka-mirrormaker-2-usages-best-practices) - Usages and best practices.
+- [Migration with MM2 and Strimzi](https://strimzi.io/blog/2021/11/22/migrating-kafka-with-mirror-maker2/) - Kubernetes migration patterns.
+- [AWS MSK Migration Guide](https://docs.aws.amazon.com/msk/latest/developerguide/migration.html) - Migrating to Amazon MSK.
+
+## AI/ML Integration
+
+### Feature Stores
+- [Online Feature Store with Kafka and Flink](https://www.kai-waehner.de/blog/2025/09/15/online-feature-store-for-ai-and-machine-learning-with-apache-kafka-and-flink/) - Building real-time feature stores.
+- [Kafka as a Feature Store](https://www.linkedin.com/pulse/kafka-feature-store-machine-learning-brindha-jeyaraman-yizkc) - Using Kafka for ML feature delivery.
+
+### ML Pipelines
+- [Kafka-ML Framework](https://github.com/ertis-research/kafka-ml) - Open-source framework connecting Kafka with TensorFlow and PyTorch.
+- [Machine Learning in Kafka Applications](https://www.confluent.io/blog/machine-learning-real-time-analytics-models-in-kafka-applications/) - Deploying ML models with Kafka.
+- [Kafka Streams ML Examples](https://github.com/kaiwaehner/kafka-streams-machine-learning-examples) - Examples with H2O, TensorFlow, Keras, and DeepLearning4J.
+- [Machine Learning with Kafka](https://oso.sh/blog/machine-learning-with-apache-kafka/) - Patterns for ML integration.
+
+### Online Learning
+- [Online Model Training and Model Drift](https://www.kai-waehner.de/blog/2025/02/23/online-model-training-and-model-drift-in-machine-learning-with-apache-kafka-and-flink/) - Continuous model training with Kafka and Flink.
+
+## Data Lakehouse Integration
+
+### Tableflow & Iceberg
+- [Confluent Tableflow](https://www.confluent.io/product/tableflow/) - Convert Kafka topics to Iceberg and Delta tables.
+- [Tableflow GA Announcement](https://www.confluent.io/blog/tableflow-ga-kafka-snowflake-iceberg/) - Real-time Kafka to Iceberg integration.
+- [Apache Iceberg for Lakehouse and Streaming](https://www.kai-waehner.de/blog/2024/07/13/apache-iceberg-the-open-table-format-for-lakehouse-and-data-streaming/) - Iceberg as the bridge between streaming and lakehouse.
+- [Tableflow with Trino and Jupyter](https://www.confluent.io/blog/integrating-confluent-tableflow-trino-apache-iceberg-jupyter/) - Querying Kafka data with Trino.
+
+### Data Warehouse Integration
+- [Snowflake Kafka Integration Options](https://www.kai-waehner.de/blog/2024/04/22/snowflake-data-integration-options-for-apache-kafka-including-iceberg/) - Snowflake integration patterns including Iceberg.
+
+## Notable KIPs
+
+### KIP-500: ZooKeeper Removal
+- [KIP-500: Replace ZooKeeper with Self-Managed Metadata Quorum](https://cwiki.apache.org/confluence/display/KAFKA/KIP-500:+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum) - The foundational KIP for KRaft.
+- [42 Ways ZooKeeper Removal Improves Kafka](https://www.confluent.io/blog/42-ways-zookeeper-removal-improves-kafka/) - Benefits of the ZooKeeper-less architecture.
+- [Prepare for KIP-500](https://www.confluent.io/blog/how-to-prepare-for-kip-500-kafka-zookeeper-removal-guide/) - Migration preparation guide.
+
+### KIP-1150: Diskless Topics
+- [KIP-1150: Diskless Topics](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1150:+Diskless+Topics) - Store data directly in object storage.
+- [Kafka Without Disks](https://medium.com/@dobeerman/kafka-without-disks-lets-talk-about-kip-1150-diskless-topics-036d29d9cf7e) - Explanation of diskless topics.
+- [Hitchhiker's Guide to Diskless Kafka](https://aiven.io/blog/guide-diskless-apache-kafka-kip-1150) - Aiven's comprehensive guide.
+- [Benchmarking Diskless Topics](https://aiven.io/blog/benchmarking-diskless-inkless-topics-part-1) - Performance benchmarks.
+
+### Other Notable KIPs
+- [KIP-848: Next-Gen Consumer Group Protocol](https://cwiki.apache.org/confluence/display/KAFKA/KIP-848%3A+The+Next+Generation+of+the+Consumer+Rebalance+Protocol) - Improved consumer rebalancing.
+- [KIP-405: Tiered Storage](https://cwiki.apache.org/confluence/display/KAFKA/KIP-405%3A+Kafka+Tiered+Storage) - Move older data to cheaper object storage.
+- [Kafka Improvement Proposals Index](https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Improvement+Proposals) - All KIPs.
+
 ## Kafka-Compatible Alternatives
 
 - [Redpanda](https://redpanda.com/) - C++ implementation with Kafka API compatibility and 10x lower latency.
@@ -311,7 +527,6 @@ Inspired by [awesome-data-engineering](https://github.com/igorbarinov/awesome-da
 - [AWS MSK](https://aws.amazon.com/msk/) - Amazon Managed Streaming for Apache Kafka with serverless option.
 - [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/) - Kafka protocol compatible event streaming on Azure.
 - [Aiven for Apache Kafka](https://aiven.io/kafka) - Multi-cloud managed Kafka with open-source focus.
-- [Upstash Kafka](https://upstash.com/kafka) - Serverless Kafka with pay-per-message pricing.
 - [Instaclustr](https://www.instaclustr.com/products/managed-apache-kafka/) - Managed open-source Kafka with strong compliance.
 - [Redpanda Cloud](https://redpanda.com/redpanda-cloud) - Managed Redpanda with BYOC and serverless options.
 
@@ -338,6 +553,42 @@ Inspired by [awesome-data-engineering](https://github.com/igorbarinov/awesome-da
 - [Apache Kafka Mailing Lists](https://kafka.apache.org/contact) - Official user and developer mailing lists.
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/apache-kafka) - Q&A for Kafka development.
 - [Reddit r/apachekafka](https://www.reddit.com/r/apachekafka/) - Community discussions and news.
+
+### Reference
+- [Conduktor Data Streaming Glossary](https://conduktor.io/glossary) - Comprehensive glossary of data streaming terminology and concepts.
+
+## Conferences & Events
+
+### Kafka Summit / Current
+- [Kafka Summit](https://www.kafka-summit.org/) - The largest annual Apache Kafka conference by Confluent.
+- [Current](https://current.confluent.io/) - Confluent's expanded conference covering the broader streaming ecosystem.
+- [Kafka Summit London 2024](https://www.confluent.io/events/kafka-summit-london-2024/) - Past sessions and slides.
+- [Confluent Events Calendar](https://events.confluent.io/) - Upcoming events and conferences.
+
+### Flink Forward
+- [Flink Forward](https://www.flink-forward.org/) - Conference dedicated to Apache Flink and stream processing.
+- [Ververica Academy](https://www.ververica.academy/) - Training sessions from Flink Forward conferences.
+
+### Meetups
+- [Apache Kafka Meetups](https://www.meetup.com/topics/apache-kafka/) - Local Kafka meetup groups worldwide.
+- [Kafka Community Events](https://kafka.apache.org/community/events/) - Official Apache Kafka events page.
+- [Meetup in a Box](https://developer.confluent.io/community/meetup-in-a-box/) - Resources for hosting Kafka meetups.
+
+## Newsletters & Community
+
+### Newsletters
+- [Confluent Developer Newsletter](https://developer.confluent.io/newsletter/) - Bimonthly newsletter on Kafka, Flink, and streaming.
+- [Kai Waehner's Blog](https://www.kai-waehner.de/blog/) - Data streaming insights and architecture patterns.
+- [ByteByteGo Newsletter](https://blog.bytebytego.com/) - System design newsletter with frequent Kafka content.
+- [System Design Newsletter](https://newsletter.systemdesign.one/) - Deep dives on distributed systems including Kafka.
+
+### Podcasts
+- [Confluent Developer Podcast](https://confluent.buzzsprout.com/) - Weekly podcast with Kafka experts and practitioners.
+- [Software Engineering Daily: Kafka](https://softwareengineeringdaily.com/?s=kafka) - Technical interviews about Kafka.
+
+### Community Resources
+- [Apache Kafka Community](https://kafka.apache.org/community/) - Official community resources and contribution guidelines.
+- [Confluent Developer](https://developer.confluent.io/) - Developer portal with courses, tutorials, and community links.
 
 ## Books
 

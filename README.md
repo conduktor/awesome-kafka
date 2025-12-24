@@ -41,6 +41,9 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 
 ### Java
 - [Apache Kafka Client](https://github.com/apache/kafka) - Official Java client with Producer, Consumer, Streams, and Admin APIs.
+- [Spring for Apache Kafka](https://spring.io/projects/spring-kafka) - Spring Boot integration for Kafka producers, consumers, and transactions.
+- [Vert.x Kafka Client](https://vertx.io/docs/vertx-kafka-client/java/) - Reactive Kafka client for Vert.x applications.
+- [SmallRye Reactive Messaging](https://smallrye.io/smallrye-reactive-messaging/) - MicroProfile reactive messaging with first-class Kafka connector used by Quarkus and Helidon.
 
 ### C/C++
 - [librdkafka](https://github.com/confluentinc/librdkafka) - High-performance C/C++ library, foundation for many language bindings.
@@ -126,8 +129,11 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 ### Streaming Databases
 - [RisingWave](https://github.com/risingwavelabs/risingwave) - PostgreSQL-compatible streaming database with materialized views.
 - [Materialize](https://github.com/MaterializeInc/materialize) - Streaming database with incremental view maintenance.
+- [Apache Pinot](https://pinot.apache.org/) - Real-time OLAP datastore with sub-second queries on Kafka topics.
+- [Apache Druid](https://druid.apache.org/) - Distributed data store for real-time analytics with Kafka ingestion.
 - [Timeplus Proton](https://github.com/timeplus-io/proton) - Fast streaming SQL engine for real-time analytics.
 - [DeltaStream](https://deltastream.io/) - Serverless stream processing using Flink SQL (commercial).
+- [StarRocks](https://docs.starrocks.io/en-us/latest/loading/RoutineLoad) - MPP database with continuous Kafka routine load for lakehouse analytics.
 
 ### Python Libraries
 - [Faust](https://github.com/faust-streaming/faust) - Stream processing library porting Kafka Streams to Python.
@@ -148,39 +154,35 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 ### Databases
 - [JDBC Connector](https://www.confluent.io/hub/confluentinc/kafka-connect-jdbc) - Source and sink for JDBC-compatible databases.
 - [MongoDB Connector](https://www.mongodb.com/docs/kafka-connector/current/) - Official MongoDB source and sink connector.
-- [Elasticsearch Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-elasticsearch) - Stream data to Elasticsearch and OpenSearch.
-- [Cassandra Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-cassandra) - Write data to Apache Cassandra.
 - [Neo4j Connector](https://neo4j.com/docs/kafka/current/) - Source and sink for Neo4j graph database.
 - [Redis Sink](https://github.com/jcustenborder/kafka-connect-redis) - Write data to Redis.
 - [ClickHouse Sink](https://github.com/ClickHouse/clickhouse-kafka-connect) - Official ClickHouse connector.
 
 ### Cloud Storage
 - [S3 Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-s3) - Export data to Amazon S3 in Avro, JSON, or Parquet.
-- [GCS Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-gcs) - Export data to Google Cloud Storage.
-- [Azure Blob Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-azure-blob-storage) - Export data to Azure Blob Storage.
-- [HDFS Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-hdfs3) - Write data to Hadoop HDFS.
 
 ### Data Warehouses
 - [BigQuery Sink](https://www.confluent.io/hub/wepay/kafka-connect-bigquery) - Stream data to Google BigQuery with upsert support.
 - [Snowflake Sink](https://docs.snowflake.com/en/user-guide/kafka-connector) - Official Snowflake connector with Iceberg support.
-- [Redshift Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-aws-redshift) - Load data into Amazon Redshift.
 
 ### Message Queues
-- [RabbitMQ Connector](https://www.confluent.io/hub/confluentinc/kafka-connect-rabbitmq) - Integrate with RabbitMQ queues.
-- [ActiveMQ Source](https://www.confluent.io/hub/confluentinc/kafka-connect-activemq) - Consume messages from ActiveMQ.
-- [AWS SQS Connector](https://www.confluent.io/hub/confluentinc/kafka-connect-sqs) - Source and sink for Amazon SQS.
-- [Azure Event Hubs Source](https://www.confluent.io/hub/confluentinc/kafka-connect-azure-event-hubs) - Consume from Azure Event Hubs.
-- [Google Pub/Sub Connector](https://www.confluent.io/hub/confluentinc/kafka-connect-gcp-pubsub) - Integration with Google Cloud Pub/Sub.
+- [JMS Source & Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-jms) - Bridge JMS providers to Kafka topics.
+
+### IoT & Protocols
+- [MQTT Connector](https://github.com/hpgrahsl/kafka-connect-mqtt) - Community MQTT source and sink connector for brokers and devices.
+
+### File Transfer
+- [SFTP/FTP Source](https://www.confluent.io/hub/confluentinc/kafka-connect-sftp) - Stream files from SFTP/FTP servers into Kafka.
 
 ### HTTP & APIs
 - [HTTP Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-http) - Send data to HTTP endpoints.
 - [HTTP Source](https://github.com/castorm/kafka-connect-http) - Poll HTTP APIs as a Kafka source.
-- [Salesforce Connector](https://www.confluent.io/hub/confluentinc/kafka-connect-salesforce) - Capture changes from Salesforce.
+- [WebSocket Source](https://github.com/conduktor/kafka-connect-websocket) - Stream messages from WebSocket endpoints into Kafka.
+- [gRPC Source](https://github.com/conduktor/kafka-connect-grpc) - Consume gRPC server-streaming endpoints directly into Kafka topics.
 
 ### Observability
-- [Datadog Metrics Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-datadog-metrics) - Stream metrics to Datadog.
 - [Splunk Sink](https://www.confluent.io/hub/splunk/kafka-connect-splunk) - Send events to Splunk.
-- [InfluxDB Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-influxdb) - Write to InfluxDB time-series database.
+- [OpenTelemetry OTLP Source](https://github.com/conduktor/kafka-connect-opentelemetry) - Receive OTLP traces/metrics/logs and publish them to Kafka topics.
 
 ### Tools & Utilities
 - [Confluent Hub](https://www.confluent.io/hub/) - Official connector marketplace.
@@ -224,6 +226,7 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 - [JMX Exporter](https://github.com/prometheus/jmx_exporter) - Prometheus exporter for JMX metrics from Kafka brokers.
 - [KMinion](https://github.com/redpanda-data/kminion) - Prometheus exporter for consumer lag and log directory sizes.
 - [Kafka Lag Exporter](https://github.com/seglo/kafka-lag-exporter) - Consumer group latency exporter for Kubernetes.
+- [Grafana Kafka Dashboards](https://grafana.com/grafana/dashboards/7589-kafka-overview/) - Curated Grafana dashboards for Kafka broker, topic, and consumer metrics.
 
 ### Cluster Management
 - [Strimzi](https://strimzi.io/) - Kubernetes operator for running Apache Kafka (CNCF Incubating).
@@ -232,6 +235,11 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 - [MirrorMaker 2](https://kafka.apache.org/documentation/#georeplication) - Built-in cross-cluster replication using Kafka Connect.
 - [Jikkou](https://github.com/streamthoughts/jikkou) - GitOps tool for managing Kafka resources as code.
 - [Kafka-Kit](https://github.com/DataDog/kafka-kit) - Datadog's tools for partition mapping, rebalancing, and auto-throttling.
+
+### Infrastructure as Code
+- [Terraform Provider for Kafka](https://github.com/Mongey/terraform-provider-kafka) - Manage Kafka topics, ACLs, and quotas with Terraform.
+- [Confluent Terraform Provider](https://github.com/confluentinc/terraform-provider-confluent) - Terraform provider for Confluent Cloud resources including Kafka clusters.
+- [Conduktor Terraform Provider](https://registry.terraform.io/providers/conduktor/conduktor/latest/docs) - Provision Conduktor Kafka Console resources (workspaces, RBAC, environments) via Terraform.
 
 ### Interactive Tools
 - [Kafka Options Explorer](https://kafka-options-explorer.conduktor.io/) - Browse and compare Kafka configuration options across versions.
@@ -300,6 +308,11 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 - [OpenMessaging Benchmark](https://github.com/openmessaging/benchmark) - Cross-platform messaging system benchmarking.
 - [Sangrenel](https://github.com/jamiealquiza/sangrenel) - Kafka cluster load testing tool.
 
+### Chaos Engineering
+- [LitmusChaos Kafka Experiments](https://litmuschaos.io/) - Chaos experiments for Kafka brokers, ZooKeeper/KRaft, and clients.
+- [Steadybit Kafka Attacks](https://www.steadybit.com/integrations/kafka) - Fault injection scenarios targeting Kafka brokers and client latency.
+- [Conduktor Chaos Testing via Gateway](https://docs.conduktor.io/guide/use-cases/chaos-testing) - Inject latency and failures through Conduktor Kafka proxy to validate resilience.
+
 ### IDE Plugins
 - [IntelliJ Kafka Plugin](https://plugins.jetbrains.com/plugin/11645-kafka) - Official JetBrains plugin for Kafka.
 - [Kafkalytic](https://plugins.jetbrains.com/plugin/11946-kafkalytic) - IntelliJ plugin with message search and filtering.
@@ -314,6 +327,10 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 - [Tracing Kafka with OpenTelemetry](https://www.instaclustr.com/blog/tracing-apache-kafka-with-opentelemetry/) - Practical instrumentation tutorial.
 - [Distributed Tracing for Kafka](https://newrelic.com/blog/how-to-relic/distributed-tracing-with-kafka) - New Relic's OpenTelemetry integration guide.
 - [Strimzi OpenTelemetry Support](https://strimzi.io/blog/2023/03/01/opentelemetry/) - From OpenTracing to OpenTelemetry in Strimzi.
+
+### Collectors & Pipelines
+- [OpenTelemetry Collector Kafka Receiver/Exporter](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/kafkareceiver) - Ingest and ship traces, metrics, and logs through Kafka pipelines.
+- [Vector](https://vector.dev/) - High-performance observability pipeline with Kafka sources and sinks for logs, metrics, and traces.
 
 ### Tracing Backends
 - [Jaeger](https://www.jaegertracing.io/) - Open-source distributed tracing platform.

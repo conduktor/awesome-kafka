@@ -2,6 +2,8 @@
 
 A curated list of awesome Apache Kafka resources, tools, libraries, and applications.
 
+> See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-connect) - A comprehensive list of Kafka Connect connectors
+
 - [Awesome Kafka](#awesome-kafka)
   - [Kafka](#kafka)
   - [Clients](#clients)

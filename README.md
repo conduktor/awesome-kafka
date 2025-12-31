@@ -2,6 +2,10 @@
 
 A curated list of awesome Apache Kafka resources, tools, libraries, and applications.
 
+> **Last verified:** December 31, 2025
+>
+> **Legend:** ⚠️ Inactive (no commits in 2+ years) · 📦 Archived
+
 > See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-connect) - A comprehensive list of Kafka Connect connectors
 
 - [Awesome Kafka](#awesome-kafka)
@@ -89,7 +93,7 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 ### Scala
 - [Alpakka Kafka](https://github.com/akka/alpakka-kafka) - Reactive Streams connector for Akka Streams.
 - [ZIO Kafka](https://github.com/zio/zio-kafka) - ZIO-based Kafka client for functional Scala.
-- [Greyhound](https://github.com/wix/greyhound) - Wix's high-level Kafka SDK with ZIO, used in 1,500+ microservices.
+- ⚠️ [Greyhound](https://github.com/wix/greyhound) - Wix's high-level Kafka SDK with ZIO, used in 1,500+ microservices.
 
 ### Kotlin
 - [kotlin-kafka](https://github.com/nomisRev/kotlin-kafka) - Kotlin Coroutines and Arrow integration for Kafka.
@@ -104,7 +108,7 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 
 ### Clojure
 - [Jackdaw](https://github.com/FundingCircle/jackdaw) - Comprehensive Kafka library for Clojure.
-- [kafka.clj](https://github.com/helins/kafka.clj) - Clojure wrapper with Kafka Streams support.
+- ⚠️ [kafka.clj](https://github.com/helins/kafka.clj) - Clojure wrapper with Kafka Streams support.
 
 ### Haskell
 - [hw-kafka-client](https://github.com/haskell-works/hw-kafka-client) - Haskell client based on librdkafka.
@@ -171,7 +175,7 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 - [JMS Source & Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-jms) - Bridge JMS providers to Kafka topics.
 
 ### IoT & Protocols
-- [MQTT Connector](https://github.com/hpgrahsl/kafka-connect-mqtt) - Community MQTT source and sink connector for brokers and devices.
+- [MQTT Connector](https://github.com/johanvandevenne/kafka-connect-mqtt) - Community MQTT source and sink connector for brokers and devices.
 
 ### File Transfer
 - [SFTP/FTP Source](https://www.confluent.io/hub/confluentinc/kafka-connect-sftp) - Stream files from SFTP/FTP servers into Kafka.
@@ -215,7 +219,7 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 - [Redpanda Console](https://github.com/redpanda-data/console) - Developer-friendly UI with time-travel debugging.
 - [AKHQ](https://github.com/tchiotludo/akhq) - Kafka GUI for topics, consumer groups, Schema Registry, and Connect.
 - [Kafdrop](https://github.com/obsidiandynamics/kafdrop) - Lightweight web UI for viewing Kafka topics and consumer groups.
-- [CMAK](https://github.com/yahoo/CMAK) - Cluster Manager for Apache Kafka by Yahoo.
+- ⚠️ [CMAK](https://github.com/yahoo/CMAK) - Cluster Manager for Apache Kafka by Yahoo.
 - [Kouncil](https://github.com/Consdata/kouncil) - Modern web interface with advanced message browsing.
 - [Conduktor Console](https://conduktor.io/) - Enterprise control plane for Kafka with access control (commercial).
 - [Lenses](https://lenses.io/) - DataOps platform with SQL Studio and data policies (commercial).
@@ -227,7 +231,7 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 - [Kafka Exporter](https://github.com/danielqsj/kafka_exporter) - Prometheus exporter for Kafka broker and consumer group metrics.
 - [JMX Exporter](https://github.com/prometheus/jmx_exporter) - Prometheus exporter for JMX metrics from Kafka brokers.
 - [KMinion](https://github.com/redpanda-data/kminion) - Prometheus exporter for consumer lag and log directory sizes.
-- [Kafka Lag Exporter](https://github.com/seglo/kafka-lag-exporter) - Consumer group latency exporter for Kubernetes.
+- 📦 [Kafka Lag Exporter](https://github.com/seglo/kafka-lag-exporter) - Consumer group latency exporter for Kubernetes.
 - [Grafana Kafka Dashboards](https://grafana.com/grafana/dashboards/7589-kafka-overview/) - Curated Grafana dashboards for Kafka broker, topic, and consumer metrics.
 
 ### Cluster Management
@@ -252,22 +256,22 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 - [kafkactl](https://github.com/deviceinsight/kafkactl) - Command-line tool inspired by kubectl with auto-completion.
 - [kaf](https://github.com/birdayz/kaf) - Modern CLI for Kafka inspired by kubectl and docker.
 - [Zoe](https://github.com/adevinta/zoe) - CLI for humans with time-based consumption and filtering.
-- [kcli](https://github.com/cswank/kcli) - Simple Kafka command line browser.
+- ⚠️ [kcli](https://github.com/cswank/kcli) - Simple Kafka command line browser.
 - [trubka](https://github.com/xitonix/trubka) - CLI tool for Kafka with Protobuf support.
 - [topicctl](https://github.com/segmentio/topicctl) - Tool for managing Kafka topics with YAML configs.
-- [kafka-shell](https://github.com/devshawn/kafka-shell) - Interactive shell for Apache Kafka.
+- ⚠️ [kafka-shell](https://github.com/devshawn/kafka-shell) - Interactive shell for Apache Kafka.
 
 ## Security
 
 ### Authentication & Authorization
 - [Strimzi OAuth](https://github.com/strimzi/strimzi-kafka-oauth) - OAuth2/OIDC authentication for Kafka.
 - [Apache Ranger](https://ranger.apache.org/) - Fine-grained authorization and centralized policy management.
-- [Kafka Security Manager](https://github.com/conduktor/kafka-security-manager) - Git-based ACL management with auto-revert by Conduktor.
+- ⚠️ [Kafka Security Manager](https://github.com/conduktor/kafka-security-manager) - Git-based ACL management with auto-revert by Conduktor.
 - [Julie](https://github.com/kafka-ops/julie) - GitOps for Kafka RBAC and topologies.
-- [kafka-gitops](https://github.com/devshawn/kafka-gitops) - Manage Kafka resources as code with Git.
+- ⚠️ [kafka-gitops](https://github.com/devshawn/kafka-gitops) - Manage Kafka resources as code with Git.
 
 ### Encryption
-- [kafka-end-2-end-encryption](https://github.com/salyh/kafka-end-2-end-encryption) - Transparent AES encryption for Kafka messages.
+- ⚠️ [kafka-end-2-end-encryption](https://github.com/salyh/kafka-end-2-end-encryption) - Transparent AES encryption for Kafka messages.
 - [kafkacrypto](https://github.com/tmcqueen-materials/kafkacrypto) - End-to-end encryption library for Python and Java.
 
 ### Governance
@@ -299,8 +303,8 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 
 ### Data Generation
 - [Kafka Connect Datagen](https://github.com/confluentinc/kafka-connect-datagen) - Generate mock data based on Avro schemas.
-- [Voluble](https://github.com/MichaelDrogalis/voluble) - Realistic relational data generator for Kafka.
-- [Datagen](https://github.com/MaterializeInc/datagen) - Multi-format data generator by Materialize.
+- ⚠️ [Voluble](https://github.com/MichaelDrogalis/voluble) - Realistic relational data generator for Kafka.
+- 📦 [Datagen](https://github.com/MaterializeInc/datagen) - Multi-format data generator by Materialize.
 - [Mockingbird](https://github.com/tinybirdco/mockingbird) - Mock streaming data generator.
 - [DataFaker](https://github.com/datafaker-net/datafaker) - Java library for generating realistic fake data.
 
@@ -308,7 +312,7 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 - [kafka-producer-perf-test](https://kafka.apache.org/documentation/#basic_ops_producer_perf) - Built-in producer performance testing tool.
 - [kafka-consumer-perf-test](https://kafka.apache.org/documentation/#basic_ops_consumer_perf) - Built-in consumer performance testing tool.
 - [OpenMessaging Benchmark](https://github.com/openmessaging/benchmark) - Cross-platform messaging system benchmarking.
-- [Sangrenel](https://github.com/jamiealquiza/sangrenel) - Kafka cluster load testing tool.
+- ⚠️ [Sangrenel](https://github.com/jamiealquiza/sangrenel) - Kafka cluster load testing tool.
 
 ### Chaos Engineering
 - [LitmusChaos Kafka Experiments](https://litmuschaos.io/) - Chaos experiments for Kafka brokers, ZooKeeper/KRaft, and clients.
@@ -344,10 +348,10 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 ### Operators
 - [Strimzi](https://strimzi.io/) - CNCF Incubating Kubernetes operator for Apache Kafka.
 - [Confluent for Kubernetes](https://docs.confluent.io/operator/current/overview.html) - Official Confluent operator for deploying Confluent Platform.
-- [Koperator](https://github.com/banzaicloud/koperator) - Banzai Cloud's Kubernetes operator for Kafka (formerly Kafka Operator).
+- 📦 [Koperator](https://github.com/banzaicloud/koperator) - Banzai Cloud's Kubernetes operator for Kafka (formerly Kafka Operator).
 
 ### Helm Charts
-- [Confluent Platform Helm Charts](https://github.com/confluentinc/cp-helm-charts) - Helm charts for Confluent Platform components.
+- 📦 [Confluent Platform Helm Charts](https://github.com/confluentinc/cp-helm-charts) - Helm charts for Confluent Platform components.
 - [Bitnami Kafka Chart](https://github.com/bitnami/charts/tree/main/bitnami/kafka) - Production-ready Kafka Helm chart.
 - [Strimzi Helm Charts](https://strimzi.io/docs/operators/latest/deploying.html#deploying-cluster-operator-helm-chart-str) - Helm-based Strimzi installation.
 
@@ -492,7 +496,7 @@ A curated list of awesome Apache Kafka resources, tools, libraries, and applicat
 ### ML Pipelines
 - [Kafka-ML Framework](https://github.com/ertis-research/kafka-ml) - Open-source framework connecting Kafka with TensorFlow and PyTorch.
 - [Machine Learning in Kafka Applications](https://www.confluent.io/blog/machine-learning-real-time-analytics-models-in-kafka-applications/) - Deploying ML models with Kafka.
-- [Kafka Streams ML Examples](https://github.com/kaiwaehner/kafka-streams-machine-learning-examples) - Examples with H2O, TensorFlow, Keras, and DeepLearning4J.
+- ⚠️ [Kafka Streams ML Examples](https://github.com/kaiwaehner/kafka-streams-machine-learning-examples) - Examples with H2O, TensorFlow, Keras, and DeepLearning4J.
 - [Machine Learning with Kafka](https://oso.sh/blog/machine-learning-with-apache-kafka/) - Patterns for ML integration.
 
 ### Online Learning

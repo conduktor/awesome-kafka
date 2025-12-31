@@ -2,13 +2,9 @@
 
 A curated list of awesome Apache Kafka resources, tools, libraries, and applications.
 
-> **Last verified:** December 31, 2025
->
-> **Legend:** ⚠️ Inactive (no commits in 2+ years) · 📦 Archived
+**Last verified:** December 31, 2025 · **Legend:** ⚠️ Inactive (no commits in 2+ years) · 📦 Archived
 
-> See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-connect) - A comprehensive list of Kafka Connect connectors
->
-> See also: [Kafka Security Controls](https://conduktor.github.io/kafka-security-controls/) - Kafka security controls mapping to CWE, NIST 800-53, and PCI-DSS standards. Integrates with OpenCRE.
+See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-connect) and [Kafka Security Controls](https://conduktor.github.io/kafka-security-controls/) to help with CWE, NIST 800-53, and PCI-DSS compliance.
 
 - [Awesome Kafka](#awesome-kafka)
   - [Kafka](#kafka)

@@ -313,6 +313,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - 📦 [Datagen](https://github.com/MaterializeInc/datagen) - Multi-format data generator by Materialize.
 - [Mockingbird](https://github.com/tinybirdco/mockingbird) - Mock streaming data generator.
 - [DataFaker](https://github.com/datafaker-net/datafaker) - Java library for generating realistic fake data.
+- [Eventum](https://github.com/eventum-generator/eventum) - Data generation platform for producing synthetic event streams based on templates.
 
 ### Benchmarking
 - [kafka-producer-perf-test](https://kafka.apache.org/documentation/#basic_ops_producer_perf) - Built-in producer performance testing tool.

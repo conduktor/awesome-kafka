@@ -57,7 +57,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 ### Python
 - [confluent-kafka-python](https://github.com/confluentinc/confluent-kafka-python) - High-performance client based on librdkafka with AsyncIO support.
 - [aiokafka](https://github.com/aio-libs/aiokafka) - Native asyncio client for Python async applications.
-- [kafka-python](https://github.com/dpkp/kafka-python) - Pure Python client (not actively maintained).
+- [kafka-python](https://github.com/dpkp/kafka-python) - Pure Python client.
 - [Faust](https://github.com/faust-streaming/faust) - Stream processing library, Python equivalent of Kafka Streams.
 
 ### Go

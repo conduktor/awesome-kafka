@@ -2,7 +2,7 @@
 
 A curated list of awesome Apache Kafka resources, tools, libraries, and applications.
 
-**Last verified:** May 5, 2026 · **Legend:** ⚠️ Inactive (no commits in 2+ years) · 📦 Archived
+**Last verified:** July 24, 2026 · **Legend:** ⚠️ Inactive (no commits in 2+ years) · 📦 Archived
 
 See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-connect) and [Kafka Security Controls](https://conduktor.github.io/kafka-security-controls/) to help with CWE, NIST 800-53, and PCI-DSS compliance.
 
@@ -39,7 +39,9 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Apache Kafka](https://kafka.apache.org/) - Distributed event streaming platform capable of handling trillions of events a day.
 - [Kafka Documentation](https://kafka.apache.org/documentation/) - Official documentation covering architecture, APIs, and operations.
 - [Kafka Quickstart](https://kafka.apache.org/quickstart/) - Get up and running with Kafka in minutes.
-- [Apache Kafka 4.2.0](https://kafka.apache.org/blog/2026/02/17/apache-kafka-4.2.0-release-announcement/) - Latest release (Feb 2026) with 38 KIPs: Share Groups (queues) production-ready, Streams server-side rebalance GA, DLQ in Streams exception handlers.
+- [Apache Kafka 4.3.0](https://kafka.apache.org/blog/2026/05/22/apache-kafka-4.3.0-release-announcement/) - Latest minor release (May 2026), an operator-focused release with 25 KIPs: share group tuning (KIP-1240), KRaft controller fetch controls, tiered-storage improvements, partition size metrics.
+- [Apache Kafka 4.3.1](https://kafka.apache.org/blog/2026/06/25/apache-kafka-4.3.1-release-announcement/) - Latest patch (Jun 2026) fixing a Kafka Streams RocksDB off-heap memory leak that could OOM on repeated task closes.
+- [Apache Kafka 4.2.0](https://kafka.apache.org/blog/2026/02/17/apache-kafka-4.2.0-release-announcement/) - Feb 2026 release with 38 KIPs: Share Groups (queues) production-ready, Streams server-side rebalance GA, DLQ in Streams exception handlers.
 - [KIPs](https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Improvement+Proposals) - Kafka Improvement Proposals tracking upcoming features and changes.
 
 ## Clients
@@ -130,6 +132,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Apache Samza](https://samza.apache.org/) - Stream processing framework with deep Kafka integration.
 - [Apache Storm](https://storm.apache.org/) - Distributed real-time computation system.
 - [Apache Beam](https://beam.apache.org/) - Unified batch and streaming API portable across runners.
+- [Arroyo](https://github.com/ArroyoSystems/arroyo) - Distributed SQL stream-processing engine in Rust; now powers Cloudflare Pipelines.
 
 ### Streaming Databases
 - [RisingWave](https://github.com/risingwavelabs/risingwave) - PostgreSQL-compatible streaming database with materialized views.
@@ -150,6 +153,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 ### Other
 - [Hazelcast](https://hazelcast.com/) - In-memory data grid with Jet stream processing engine.
 - [Redpanda Connect](https://github.com/redpanda-data/connect) - Declarative stream processor with 100+ connectors (formerly Benthos).
+- [GlassFlow](https://github.com/glassflow/clickhouse-etl) - Open-source Kafka-to-ClickHouse streaming ETL with dedup, temporal joins, and DLQ.
 
 ## Kafka Connect
 
@@ -174,7 +178,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [JMS Source & Sink](https://www.confluent.io/hub/confluentinc/kafka-connect-jms) - Bridge JMS providers to Kafka topics.
 
 ### IoT & Protocols
-- [MQTT Connector](https://github.com/johanvandevenne/kafka-connect-mqtt) - Community MQTT source and sink connector for brokers and devices.
+- ⚠️ [MQTT Connector](https://github.com/johanvandevenne/kafka-connect-mqtt) - Community MQTT source and sink connector for brokers and devices.
 
 ### File Transfer
 - [SFTP/FTP Source](https://www.confluent.io/hub/confluentinc/kafka-connect-sftp) - Stream files from SFTP/FTP servers into Kafka.
@@ -262,6 +266,8 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [topicctl](https://github.com/segmentio/topicctl) - Tool for managing Kafka topics with YAML configs.
 - [Yozefu](https://github.com/MAIF/yozefu) - Interactive TUI for exploring Kafka topics with SQL-like queries and WebAssembly filters.
 - [Kafka-King](https://github.com/Bronya0/Kafka-King) - Cross-platform desktop GUI client (Go + Wails) with Schema Registry, consumer lag, and compression support.
+- [ktea](https://github.com/jonas-grgt/ktea) - Kafka TUI in Go, "k9s for Kafka": multi-cluster, topics, consumer groups, Schema Registry and Connect integration.
+- [kaskade](https://github.com/sauljabin/kaskade) - Python/Textual TUI with admin and consumer views, Avro/Protobuf/JSON deserialization, and Schema Registry support.
 - [kafka-e2e-latency.sh](https://kafka.apache.org/documentation/#basic_ops_e2e_latency) - Built-in tool for measuring end-to-end produce-to-consume latency (new in Kafka 4.2).
 - [kafka-unclean-recovery.sh](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1275) - Controlled unclean partition recovery with minimized data loss (KIP-1275).
 - ⚠️ [kafka-shell](https://github.com/devshawn/kafka-shell) - Interactive shell for Apache Kafka.
@@ -272,8 +278,9 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Strimzi OAuth](https://github.com/strimzi/strimzi-kafka-oauth) - OAuth2/OIDC authentication for Kafka.
 - [Apache Ranger](https://ranger.apache.org/) - Fine-grained authorization and centralized policy management.
 - ⚠️ [Kafka Security Manager](https://github.com/conduktor/kafka-security-manager) - Git-based ACL management with auto-revert by Conduktor.
-- [Julie](https://github.com/kafka-ops/julie) - GitOps for Kafka RBAC and topologies.
+- ⚠️ [Julie](https://github.com/kafka-ops/julie) - GitOps for Kafka RBAC and topologies.
 - ⚠️ [kafka-gitops](https://github.com/devshawn/kafka-gitops) - Manage Kafka resources as code with Git.
+- [Klaw](https://github.com/Aiven-Open/klaw) - Self-service Kafka governance with approval workflows for topics, ACLs, schemas, and connectors (successor to Kafkawize, now under Aiven).
 
 ### Encryption
 - ⚠️ [kafka-end-2-end-encryption](https://github.com/salyh/kafka-end-2-end-encryption) - Transparent AES encryption for Kafka messages.
@@ -289,6 +296,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Kroxylicious](https://github.com/kroxylicious/kroxylicious) - Java framework for building Kafka protocol proxies with Kubernetes operator support.
 - [Gloo Gateway](https://www.solo.io/products/gloo-gateway/) - Kubernetes-native API gateway with Kafka support.
 - [Apache APISIX](https://apisix.apache.org/) - API gateway with kafka-proxy plugin.
+- [Aklivity Zilla](https://github.com/aklivity/zilla) - Stateless multi-protocol edge proxy exposing Kafka topics as HTTP/SSE/gRPC/MQTT/WebSocket endpoints, driven by AsyncAPI/OpenAPI.
 
 ## Testing & Development
 
@@ -358,7 +366,6 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - 📦 [Koperator](https://github.com/banzaicloud/koperator) - Banzai Cloud's Kubernetes operator for Kafka (formerly Kafka Operator).
 
 ### Helm Charts
-- 📦 [Confluent Platform Helm Charts](https://github.com/confluentinc/cp-helm-charts) - Helm charts for Confluent Platform components.
 - [Bitnami Kafka Chart](https://github.com/bitnami/charts/tree/main/bitnami/kafka) - Production-ready Kafka Helm chart.
 - [Strimzi Helm Charts](https://strimzi.io/docs/operators/latest/deploying.html#deploying-cluster-operator-helm-chart-str) - Helm-based Strimzi installation.
 
@@ -395,12 +402,17 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Grafana Loki Rearchitected with Kafka](https://www.infoq.com/news/2026/04/grafana-loki-ai-agents/) - Kafka introduced as Loki's durability layer: 20x less data scanned, 10x faster queries.
 - [Coles Group: Enterprise-Wide Data Streaming Platform](http://www.itnews.com.au/news/coles-sets-up-standard-data-streaming-platform-groupwide-624338) - Australian retailer standardized on Confluent Cloud with self-service onboarding and policy-as-code governance.
 - [Telstra: Adding Flink to Kafka Event Streaming](http://www.itnews.com.au/news/telstra-to-add-flink-to-its-event-streaming-capabilities-624513) - Telstra expands Kafka-based network observability platform with Flink for real-time fault detection.
+- [ShareChat: Cost-Effective Logging at Scale with WarpStream](https://www.warpstream.com/blog/cost-effective-logging-at-scale-sharechats-journey-to-warpstream) - Cutting Kafka costs ~60% vs multi-AZ with zero-ops autoscaling for ML and log workloads.
+- [Rivian: Real-Time Intelligence from Vehicle Telemetry](https://www.kai-waehner.de/blog/2026/01/16/shift-left-in-automotive-real-time-intelligence-from-vehicle-telemetry-with-data-streaming-at-rivian/) - Rivian/VW "Mega Filter" cut telemetry volume 88% (288TB→34TB/day) with Kafka and Flink.
+- [Qantas: Real-Time Aviation with Data Streaming](https://www.kai-waehner.de/blog/2026/02/16/from-takeoff-to-touchdown-real-time-aviation-with-data-streaming-at-qantas/) - Kafka and Flink for airport decision-making and ground turn management.
 
 ### Architecture Patterns
 - [Wix: 6 Event-Driven Architecture Patterns (Part 1)](https://medium.com/wix-engineering/6-event-driven-architecture-patterns-part-1-93758b253f47) - Patterns from running 1,500 microservices on Kafka.
 - [Wix: 6 Event-Driven Architecture Patterns (Part 2)](https://medium.com/wix-engineering/6-event-driven-architecture-patterns-part-2-455cc73b22e1) - Advanced patterns including retry strategies and dead-letter queues.
 - [Kai Waehner: Use Cases Across Industries](https://www.kai-waehner.de/blog/2020/10/20/apache-kafka-event-streaming-use-cases-architectures-examples-real-world-across-industries/) - Comprehensive overview of Kafka use cases by industry.
 - [Kafka in Production](https://github.com/dttung2905/kafka-in-production) - Curated collection of tech blogs and talks from companies running Kafka.
+- [What Every Kafka Engineer Needs to Know for 2026](https://oso.sh/blog/what-every-kafka-engineer-needs-to-know-2026/) - OSO's forward look at the 2026 ecosystem: IBM/Confluent, AI tooling, context engines, diskless.
+- [Kafka Scaling Best Practices: An In-Depth Primer](https://factorhouse.io/articles/kafka-scaling-best-practices/) - Four scaling dimensions (brokers, partitions, consumers, storage) with patterns from LinkedIn, Uber, and Pinterest.
 
 ## Best Practices & Patterns
 
@@ -408,6 +420,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Event Sourcing, CQRS, and Kafka](https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/) - How Kafka enables event sourcing and CQRS patterns.
 - [CQRS in Event Sourcing Patterns](https://developer.confluent.io/courses/event-sourcing/cqrs/) - Confluent Developer course on implementing CQRS with Kafka.
 - [Microservices: Event Sourcing & CQRS](https://microservices.io/patterns/data/event-sourcing.html) - Pattern catalog entry for event sourcing.
+- [EDA with Kafka: CQRS, Event Sourcing, Saga and Outbox in Production](https://floriancourouge.com/en/blog/event-driven-architecture-kafka) - Pragmatic guide on when each pattern pays off versus adds complexity.
 
 ### Exactly-Once Semantics
 - [Exactly-Once Semantics in Kafka](https://www.confluent.io/blog/exactly-once-semantics-are-possible-heres-how-apache-kafka-does-it/) - Deep dive into how Kafka achieves exactly-once.
@@ -531,6 +544,10 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Building a Real-Time Context Engine for AI Agents](https://oso.sh/blog/how-to-build-real-time-context-engine-ai-agents-apache-kafka/) - The "context engineering" paradigm shift with Kafka for enterprise AI agents.
 - [Data Streaming at MWC 2026: Kafka, Flink and Agentic AI](https://www.kai-waehner.de/blog/2026/03/03/data-streaming-at-mwc-2026-how-apache-kafka-flink-and-agentic-ai-power-telecom-trends/) - Kafka + Flink powering agentic AI and autonomous networks in telecom.
 - [Conduktor AI for Kafka Operations](https://www.conduktor.io/blog/ai-kafka-operations) - MCP-powered AI for incident investigation, compliance evidence, cost discovery, and onboarding. Stays within your network.
+- [Confluent Real-Time Context Engine](https://www.confluent.io/blog/introducing-real-time-context-engine-ai/) - Managed service materializing Kafka data and serving it to agents over MCP (GA Q2 2026).
+- [MCP vs. REST vs. Kafka: Agentic AI Integration Guide](https://www.kai-waehner.de/blog/2026/04/10/mcp-vs-rest-http-api-vs-kafka-the-architects-guide-to-agentic-ai-integration/) - When to use MCP, REST, or Kafka as the integration layer for enterprise agentic AI.
+- [Enterprise Agentic AI Landscape Q2 2026](https://www.kai-waehner.de/blog/2026/04/06/enterprise-agentic-ai-landscape-2026-trust-flexibility-and-vendor-lock-in/) - Maps AI vendors against real-time data infra, arguing Kafka and Flink are the backbone for production agents.
+- [Confluent Cloud Q2 2026: AI-Ready Data, Pipelines, and Ops](https://www.confluent.io/blog/2026-q2-confluent-cloud-launch/) - GA of Streaming Agents and Real-Time Context Engine, managed MCP server, and Flink dbt adapter.
 
 ### Feature Stores
 - [Online Feature Store with Kafka and Flink](https://www.kai-waehner.de/blog/2025/09/15/online-feature-store-for-ai-and-machine-learning-with-apache-kafka-and-flink/) - Building real-time feature stores.
@@ -552,7 +569,12 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Tableflow GA Announcement](https://www.confluent.io/blog/tableflow-ga-kafka-snowflake-iceberg/) - Real-time Kafka to Iceberg integration (Delta Lake also GA).
 - [Top 9 Ways to Stream Kafka Topics to Iceberg Tables in 2026](https://www.automq.com/blog/kafka-to-iceberg-top-9-ways-2026) - Comparative guide: Tableflow, WarpStream, Iceberg Kafka Connect Sink, Redpanda, AutoMQ, Flink, and more.
 - [Apache Iceberg for Lakehouse and Streaming](https://www.kai-waehner.de/blog/2024/07/13/apache-iceberg-the-open-table-format-for-lakehouse-and-data-streaming/) - Iceberg as the bridge between streaming and lakehouse.
+- [Aiven Iceberg Topics](https://github.com/Aiven-Open/tiered-storage-for-apache-kafka) - Iceberg mode in the KIP-405 tiered-storage RemoteStorageManager, exposing Kafka topics as zero-copy Iceberg tables with no connector hop.
 - [Tableflow with Trino and Jupyter](https://www.confluent.io/blog/integrating-confluent-tableflow-trino-apache-iceberg-jupyter/) - Querying Kafka data with Trino.
+- [Tableflow TCO: Analytics-Ready Tables at 30-50% Lower Cost](https://www.confluent.io/blog/tableflow-tco-savings/) - The cost case for materializing Kafka topics straight to Iceberg/Delta.
+- [WarpStream Tableflow Is Now GA](https://www.warpstream.com/blog/warpstream-tableflow-is-now-generally-available) - BYOC, vendor-agnostic Iceberg materialization from any Kafka-compatible source.
+- [The State of Streaming to Apache Iceberg (July 2026)](https://iceberglakehouse.com/posts/streaming-to-iceberg-july-2026/) - Alex Merced compares every Kafka-to-Iceberg path by latency and use case.
+- [KIP-1150 Accepted, and the Road Ahead](https://aiven.io/blog/kip-1150-accepted-and-the-road-ahead) - Aiven on the community accepting diskless topics as the diskless-to-lakehouse foundation.
 
 ### Data Warehouse Integration
 - [Snowflake Kafka Integration Options](https://www.kai-waehner.de/blog/2024/04/22/snowflake-data-integration-options-for-apache-kafka-including-iceberg/) - Snowflake integration patterns including Iceberg.
@@ -565,7 +587,10 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Prepare for KIP-500](https://www.confluent.io/blog/how-to-prepare-for-kip-500-kafka-zookeeper-removal-guide/) - Migration preparation guide.
 
 ### KIP-1150: Diskless Topics
-- [KIP-1150: Diskless Topics](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1150:+Diskless+Topics) - Store data directly in object storage.
+- [KIP-1150: Diskless Topics](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1150:+Diskless+Topics) - Umbrella proposal (accepted March 2026) to store data directly in object storage; split into implementation sub-KIPs 1163/1164/1165, not yet in a release.
+- [KIP-1163: Diskless Core](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1163:+Diskless+Core) - Core ingestion engine: buffers batches, uploads shared log segments to object storage, delegates replication to the object store.
+- [KIP-1164: Diskless Coordinator](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1164:+Diskless+Coordinator) - Pluggable Batch Coordinator that assigns total order/offsets and serves batch coordinates.
+- [KIP-1165: Object Compaction for Diskless](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1165:+Object+Compaction+for+Diskless) - Merges/rewrites objects so deleted batches are physically removed and small batches coalesced.
 - [Kafka Without Disks](https://medium.com/@dobeerman/kafka-without-disks-lets-talk-about-kip-1150-diskless-topics-036d29d9cf7e) - Explanation of diskless topics.
 - [Hitchhiker's Guide to Diskless Kafka](https://aiven.io/blog/guide-diskless-apache-kafka-kip-1150) - Aiven's comprehensive guide.
 - [Benchmarking Diskless Topics](https://aiven.io/blog/benchmarking-diskless-inkless-topics-part-1) - Performance benchmarks.
@@ -587,6 +612,9 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [KIP-1312: Unregistering Controllers in KRaft](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1312%3A+Support+unregistering+controllers) - Dynamic controller registration/unregistration in KRaft clusters.
 - [KIP-1313: Client Instance ID in All Request Headers](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1313%3A+Client+instance+ID+in+all+request+headers) - Auto-generated UUID in every request header for better observability.
 - [KIP-1332: Dynamic Memory Allocation for Producer](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1332) - Optimizes producer memory by allocating dynamically as records are added.
+- [KIP-1240: Additional Group Configurations for Share Groups](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1240:+Additional+group+configurations+for+share+groups) - Exposes share group limits (delivery attempts, record lock limits, renewal acknowledgment) as per-group configs. Shipped in 4.3.0.
+- [KIP-1274: Deprecate Classic Rebalance Protocol in KafkaConsumer](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1274:+Deprecate+and+remove+support+for+Classic+rebalance+protocol+in+KafkaConsumer) - Phase 1 deprecation steering consumers to the KIP-848 protocol. Shipped in 4.3.0.
+- [KIP-1316: Circuit Breaker for Share Group DLQ Overflow](https://cwiki.apache.org/confluence/spaces/KAFKA/pages/406622499/KIP-1316+Circuit+Breaker+for+Share+Group+DLQ+Overflow) - Prevents dead-letter-queue overflow from cascading into primary pipeline failures (draft).
 - [Kafka Improvement Proposals Index](https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Improvement+Proposals) - All KIPs.
 
 ## Kafka-Compatible Alternatives
@@ -644,23 +672,24 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 
 ## Conferences & Events
 
-### Current 2026 (formerly Kafka Summit)
-- [Current San Francisco 2026](https://current.confluent.io/) - November 4-5, 2026. The flagship US conference.
-- [Current London 2026](https://current.confluent.io/london) - May 19-20, 2026 at ExCeL London.
+### Current (formerly Kafka Summit)
+- [Current San Francisco 2026](https://current.confluent.io/san-francisco) - November 4-5, 2026 at Moscone West. The flagship US data streaming conference.
 - [Confluent Events & Webinars](https://www.confluent.io/events/) - Upcoming events, webinars, and Data Streaming World Tour stops.
 - [Current Past Events](https://current.confluent.io/past-events) - Session archives from Current and Kafka Summit conferences (2016-2025).
 
-### Kafka Summit & Current (Archive)
+### Archive
+- [Current London 2026](https://current.confluent.io/london) - May 19-20, 2026 at ExCeL London. Past sessions and slides.
 - [Current Bengaluru 2026](https://current.confluent.io/) - April 22, 2026. Past sessions and slides.
 - [Kafka Summit London 2024](https://www.confluent.io/events/kafka-summit-london-2024/) - Past sessions and slides.
 
 ### Flink Forward
-- [Flink Forward Asia 2026](https://asia.flink-forward.org/shenzhen-2026) - June 26-27, 2026 in Shenzhen, China. Free event focused on real-time AI and stream processing.
 - [Flink Forward](https://www.flink-forward.org/) - Conference dedicated to Apache Flink and stream processing.
+- [Flink Forward Asia Shenzhen 2026](https://asia.flink-forward.org/shenzhen-2026) - June 26-27, 2026 in Shenzhen, China. Past sessions on real-time AI and stream processing.
 - [Ververica Academy](https://www.ververica.academy/) - Training sessions from Flink Forward conferences.
 
 ### StrimziCon
-- [StrimziCon Virtual 2026](https://community.cncf.io/events/details/cncf-virtual-project-events-hosted-by-cncf-presents-strimzicon-virtual-2026/) - June 3, 2026 (virtual). CNCF-hosted event focused on Strimzi and Kafka on Kubernetes.
+- [StrimziCon 2026 Roundup](https://strimzi.io/blog/2026/06/23/strimzicon2026-roundup/) - Recap of the June 3, 2026 CNCF-hosted event on Strimzi and Kafka on Kubernetes.
+- [StrimziCon 2026 Recordings](https://www.youtube.com/playlist?list=PLpI4X8PMthYcTXj9tpcLEpTgEBxQrZyBc) - All session recordings: Reddit's 500+ broker migration, Strimzi MCP server, disaster recovery.
 
 ### Meetups
 - [Apache Kafka Meetups](https://www.meetup.com/topics/apache-kafka/) - Local Kafka meetup groups worldwide.
@@ -678,7 +707,9 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [System Design Newsletter](https://newsletter.systemdesign.one/) - Deep dives on distributed systems including Kafka.
 
 ### Podcasts
+- [Apache Kafka Community Podcasts](https://kafka.apache.org/community/podcasts/) - Official curated list of Kafka podcasts (Streaming Audio, Data Engineering Podcast, Get Kafka-Nated, and more).
 - [Confluent Developer Podcast](https://confluent.buzzsprout.com/) - Weekly podcast with Kafka experts and practitioners.
+- [Get Kafka-Nated](https://getkafkanated.substack.com/) - Community podcast and newsletter on KIP discussions, releases, and ecosystem news.
 - [Software Engineering Daily: Kafka](https://softwareengineeringdaily.com/?s=kafka) - Technical interviews about Kafka.
 
 ### Community Resources

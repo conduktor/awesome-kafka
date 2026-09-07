@@ -232,6 +232,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 
 ### Metrics & Exporters
 - [Burrow](https://github.com/linkedin/Burrow) - LinkedIn's consumer lag checking and monitoring service.
+- [Kafka Canary](https://github.com/taekjaskyli/kafka-canary) - Synthetic availability probe that produces and consumes on a dedicated topic and exports Prometheus metrics for latency, broker connectivity, and errors. Maintained fork of the archived Strimzi Canary, with Kafka 4 support.
 - [Kafka Exporter](https://github.com/danielqsj/kafka_exporter) - Prometheus exporter for Kafka broker and consumer group metrics.
 - [JMX Exporter](https://github.com/prometheus/jmx_exporter) - Prometheus exporter for JMX metrics from Kafka brokers.
 - [KMinion](https://github.com/redpanda-data/kminion) - Prometheus exporter for consumer lag and log directory sizes.

@@ -225,6 +225,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Kafdrop](https://github.com/obsidiandynamics/kafdrop) - Lightweight web UI for viewing Kafka topics and consumer groups.
 - ⚠️ [CMAK](https://github.com/yahoo/CMAK) - Cluster Manager for Apache Kafka by Yahoo.
 - 📦 [Kouncil](https://github.com/Consdata/kouncil) - Modern web interface with advanced message browsing.
+- [LibreDB Studio](https://github.com/libredb/libredb-studio) - Web-based multi-database IDE with a read-only Kafka browser for topics, consumer groups with lag, brokers, and messages by offset or timestamp. Browses Kafka alongside PostgreSQL, MySQL, MongoDB and other databases in one UI.
 - [Conduktor Console](https://conduktor.io/) - Enterprise control plane for Kafka with access control (commercial).
 - [Lenses](https://lenses.io/) - DataOps platform with SQL Studio and data policies (commercial).
 - [kPow](https://factorhouse.io/kpow/) - Enterprise Kafka monitoring with RBAC and audit logging (commercial).

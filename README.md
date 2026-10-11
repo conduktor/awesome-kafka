@@ -159,6 +159,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 
 ### CDC (Change Data Capture)
 - [Debezium](https://debezium.io/) - CDC platform for MySQL, PostgreSQL, MongoDB, SQL Server, Oracle, and more.
+- [OLake](https://github.com/datazip-inc/olake) - Open-source CDC from Postgres, MySQL, MongoDB, Oracle and SQL Server, and a Kafka source, written directly to Apache Iceberg without Kafka Connect. ![Stars](https://img.shields.io/github/stars/datazip-inc/olake)
 
 ### Databases
 - [JDBC Connector](https://www.confluent.io/hub/confluentinc/kafka-connect-jdbc) - Source and sink for JDBC-compatible databases.

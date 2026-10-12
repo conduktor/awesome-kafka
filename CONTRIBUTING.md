@@ -13,19 +13,19 @@ Thank you for your interest in contributing! This list is vendor-agnostic and co
 ### Entry format
 
 ```markdown
-- [Project Name](https://github.com/org/project) - Brief description (1 sentence). Key differentiator. ![Stars](https://img.shields.io/github/stars/org/project)
+- [Project Name](https://github.com/org/project) - What it does and what sets it apart, in one sentence.
 ```
 
-**Add badges where appropriate:**
-- 💰 for commercial/paid products
-- ⚠️ for deprecated/unmaintained projects
-- **Recommended** for best-in-class tools
+**Markers** (same as the README legend):
+- ⚠️ before the link: inactive, no commits in 2+ years
+- 📦 before the link: archived repository
+- `(commercial)` at the end of the description: paid product
 
 ### Pull Request Process
 
 1. **Fork** this repository
 2. **Add** your resource in the appropriate category
-3. **Ensure** alphabetical ordering within categories
+3. **Append** it at the end of that category
 4. **Verify** all links work
 5. **Submit** a PR with a clear description
 
@@ -44,8 +44,7 @@ If your resource doesn't fit an existing category, propose a new one. Categories
 ## Updating Existing Entries
 
 - Fix broken links
-- Update star counts (automated via shields.io)
-- Mark deprecated projects appropriately
+- Add ⚠️ or 📦 to projects that went inactive or were archived
 - Add new features or significant updates
 
 ## Questions?

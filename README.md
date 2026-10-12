@@ -543,6 +543,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 ## AI/ML Integration
 
 ### MCP Servers (Model Context Protocol)
+- [Conduktor MCP Server](https://github.com/conduktor/kafka-mcp) - MCP endpoint built into Conduktor Console: 31 tools over topics, consumer groups and lag, schemas, connectors, ACLs, lineage and per-team cost, each call run under the caller's Console RBAC. Runs with `npx @conduktor/mcp`.
 - [Confluent MCP Server](https://www.confluent.io/blog/ai-agents-using-anthropic-mcp/) - Official Confluent MCP server for AI agents: direct access to Kafka, Flink, Tableflow, billing/metrics APIs.
 - [Lenses MCP Server](https://github.com/lensesio/lenses-mcp) - Enterprise MCP server for Kafka with IAM governance and PII masking for AI agents.
 - [Google Cloud Managed Kafka MCP](https://cloud.google.com/products/managed-service-for-apache-kafka) - Google Cloud remote MCP server for managing Kafka clusters, topics, ACLs via LLM agents (auto-enabled March 2026).

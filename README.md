@@ -588,6 +588,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Top 9 Ways to Stream Kafka Topics to Iceberg Tables in 2026](https://www.automq.com/blog/kafka-to-iceberg-top-9-ways-2026) - Comparative guide: Tableflow, WarpStream, Iceberg Kafka Connect Sink, Redpanda, AutoMQ, Flink, and more.
 - [Apache Iceberg for Lakehouse and Streaming](https://www.kai-waehner.de/blog/2024/07/13/apache-iceberg-the-open-table-format-for-lakehouse-and-data-streaming/) - Iceberg as the bridge between streaming and lakehouse.
 - [Aiven Iceberg Topics](https://github.com/Aiven-Open/tiered-storage-for-apache-kafka) - Iceberg mode in the KIP-405 tiered-storage RemoteStorageManager, exposing Kafka topics as zero-copy Iceberg tables with no connector hop.
+- [OLake](https://github.com/datazip-inc/olake) - Open-source Go replicator that consumes Kafka topics (and database CDC) into Apache Iceberg without Kafka Connect or Flink.
 - [Tableflow with Trino and Jupyter](https://www.confluent.io/blog/integrating-confluent-tableflow-trino-apache-iceberg-jupyter/) - Querying Kafka data with Trino.
 - [Tableflow TCO: Analytics-Ready Tables at 30-50% Lower Cost](https://www.confluent.io/blog/tableflow-tco-savings/) - The cost case for materializing Kafka topics straight to Iceberg/Delta.
 - [WarpStream Tableflow Is Now GA](https://www.warpstream.com/blog/warpstream-tableflow-is-now-generally-available) - BYOC, vendor-agnostic Iceberg materialization from any Kafka-compatible source.

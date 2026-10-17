@@ -677,6 +677,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [Confluent Developer](https://developer.confluent.io/courses/) - Free courses on Kafka, Flink, Kafka Streams, and ksqlDB.
 - [Stephane Maarek's Kafka Courses](https://www.udemy.com/user/stephane-maarek/) - Popular Udemy courses covering Kafka fundamentals to advanced topics.
 - [Confluent Certified Developer](https://www.confluent.io/certification/) - Official Kafka certification exam.
+- [Kafka Simulator](https://monedula.dev/kafka-simulator/) - Free in-browser simulator with guided scenarios: change settings or kill brokers and step through how replication, ISR, consumer groups, and transactions react.
 
 ### Documentation & Tutorials
 - [Confluent Documentation](https://docs.confluent.io/) - Comprehensive guides for Confluent Platform and Cloud.

@@ -67,6 +67,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [kafka-go](https://github.com/segmentio/kafka-go) - Go-idiomatic Kafka library by Segment.
 - [Sarama](https://github.com/IBM/sarama) - Most popular Go client, pure Go implementation.
 - [confluent-kafka-go](https://github.com/confluentinc/confluent-kafka-go) - CGo wrapper around librdkafka with official Confluent support.
+- [bus](https://github.com/korableg/bus) - Event bus framework on top of Sarama with protobuf-typed producers and consumer groups, retries, batch handlers and automatic offset commits.
 
 ### Rust
 - [rust-rdkafka](https://github.com/fede1024/rust-rdkafka) - Async futures-based client built on librdkafka.

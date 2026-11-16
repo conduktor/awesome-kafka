@@ -235,6 +235,7 @@ See also: [awesome-kafka-connect](https://github.com/conduktor/awesome-kafka-con
 - [kPow](https://factorhouse.io/kpow/) - Enterprise Kafka monitoring with RBAC and audit logging (commercial).
 - [AxonOps](https://axonops.com/kafka-overview/) - Unified monitoring with 5-second metrics granularity, log overlay on dashboards, and ACL management (free tier up to 3 nodes).
 - [Confluent Control Center](https://www.confluent.io/product/confluent-platform/) - Monitoring and management for Confluent Platform (commercial).
+- [kafka-console](https://github.com/rakunlabs/kafka-console) - Kafka Web UI with message search, filters, range replay, consumer offset reset, multi cluster.
 
 ### Metrics & Exporters
 - [Burrow](https://github.com/linkedin/Burrow) - LinkedIn's consumer lag checking and monitoring service.
